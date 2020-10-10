@@ -3,10 +3,13 @@
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
-    "prettier/standard"
+    "prettier/standard",
+    "prettier/react"
   ],
-  "plugins": ["import"],
+  "plugins": ["import", "react", "react-hooks"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
@@ -17,5 +20,6 @@
   "env": {
     "es6": true,
     "node": true
-  }
+  },
+  "rules": { "react/jsx-uses-react": "error", "react/jsx-uses-vars": "error" }
 }
