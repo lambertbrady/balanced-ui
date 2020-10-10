@@ -1,2 +1,2 @@
-# balanced-ui
+# mesh-ui
 CSS-in-JS UI Framework built on Emotion
