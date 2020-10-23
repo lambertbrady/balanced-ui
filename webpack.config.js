@@ -15,10 +15,20 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader']
       }
     ]
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/dist/'
@@ -27,7 +37,8 @@ module.exports = {
     contentBase: path.join(__dirname, 'public/'),
     port: 8080,
     publicPath: '/dist/',
-    hot: true
+    hot: true,
+    clientLogLevel: 'error'
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
 }
