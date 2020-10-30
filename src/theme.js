@@ -1,8 +1,10 @@
-export default {
+const theme = {
   colors: {
     primary: 'aquamarine',
-    secondary: 'orange'
+    secondary: 'orange',
+    tertiary: 'red'
   },
+  space: [4, 8, 12, 16, 20, 24, 28, 32],
   components: {
     // shared: {
     //   boxSizing: 'border-box',
@@ -22,3 +24,5 @@ export default {
     }
   }
 }
+
+export default theme

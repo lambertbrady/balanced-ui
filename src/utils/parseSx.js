@@ -1,23 +1,26 @@
-// TODO: curry function
-const parseSx = (themeMap, theme, sx) => {
+// TODO: curry function?
+const parseSx = (theme, themeMap, sx) => {
   let css = {}
 
   for (const [sxKey, sxVal] of Object.entries(sx)) {
-    // call function recursively if sxVal is a plain object
-    if (typeof sxVal === 'object' && !Array.isArray(sxVal) && sxVal !== null) {
-      css[sxKey] = parseSx(themeMap, theme, sxVal)
-      continue
-    }
+    let cssVal = sxVal
 
-    // 1) hasThemeMapping
-    // 2) hasThemeProperty
-    // 3) hasThemeKey
-    css[sxKey] =
+    if (typeof sxVal === 'object' && !Array.isArray(sxVal) && sxVal !== null) {
+      // call function recursively if sxVal is a plain object
+      cssVal = parseSx(theme, themeMap, sxVal)
+    } else if (typeof sxVal === 'function') {
+      cssVal = sxVal(theme)
+    } else if (
       Object.prototype.hasOwnProperty.call(themeMap, sxKey) &&
       Object.prototype.hasOwnProperty.call(theme, themeMap[sxKey]) &&
       Object.prototype.hasOwnProperty.call(theme[themeMap[sxKey]], sxVal)
-        ? theme[themeMap[sxKey]][sxVal]
-        : sxVal
+    ) {
+      // (isValidThemeMapKey && isValidThemeProperty && isValidThemeKey)
+      cssVal = theme[themeMap[sxKey]][sxVal]
+      // console.log(`{ ${sxKey}: ${sxVal} } :: ${themeMap[sxKey]} >> ${cssVal}`)
+    }
+
+    css[sxKey] = cssVal
   }
 
   return css

@@ -36,7 +36,7 @@ const Box = styled.div(({ theme, sx }) => {
     ...boxDefaults,
     ...theme.components.box.defaults,
     // ...theme.components.box.variants,
-    ...parseSx(themeMap, theme, sx)
+    ...parseSx(theme, themeMap, sx)
     // ...sx
   }
   return obj

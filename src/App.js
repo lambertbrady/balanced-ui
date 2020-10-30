@@ -11,17 +11,23 @@ const App = function () {
         sx={{
           width: 200,
           height: 200,
-          padding: 5,
+          margin: (t) => t.space[2],
+          padding: 3,
           backgroundColor: 'primary',
           '> *': {
-            color: 'blue'
+            color: 'secondary',
+            '> *': {
+              color: 'tertiary',
+              padding: (t) => t.space[2]
+            }
           }
         }}
       >
-        <span>
+        <Box sx={{ border: '2px solid green' }}>
           Box component using Styled Components and theme value for
           backgroundColor
-        </span>
+          <div>Nested text</div>
+        </Box>
       </Box>
     </ThemeProvider>
   )

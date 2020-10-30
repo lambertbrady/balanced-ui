@@ -1,3 +1,149 @@
+// TODO: add utility to go between theme map representations (and pick a default to use)
+// const themeMap_flipped = {
+//   borders: [
+//     'border',
+//     'borderTop',
+//     'borderRight',
+//     'borderBottom',
+//     'borderLeft',
+//     'borderBlock',
+//     'borderBlockEnd',
+//     'borderBlockStart',
+//     'borderInline',
+//     'borderInlineEnd',
+//     'borderInlineStart'
+//   ],
+//   borderStyles: [
+//     'borderStyle',
+//     'borderTopStyle',
+//     'borderRightStyle',
+//     'borderBottomStyle',
+//     'borderLeftStyle',
+//     'borderBlockEndStyle',
+//     'borderBlockStartStyle',
+//     'borderBlockStyle',
+//     'borderInlineEndStyle',
+//     'borderInlineStartStyle',
+//     'borderInlineStyle'
+//   ],
+//   borderWidths: [
+//     'borderWidth',
+//     'borderTopWidth',
+//     'borderRightWidth',
+//     'borderBottomWidth',
+//     'borderLeftWidth',
+//     'borderBlockEndWidth',
+//     'borderBlockStartWidth',
+//     'borderBlockWidth',
+//     'borderInlineEndWidth',
+//     'borderInlineStartWidth',
+//     'borderInlineWidth'
+//   ],
+//   colors: [
+//     'color',
+//     'backgroundColor',
+//     'borderColor',
+//     'caretColor',
+//     'columnRuleColor',
+//     'borderTopColor',
+//     'borderRightColor',
+//     'borderBottomColor',
+//     'borderLeftColor',
+//     'outlineColor',
+//     'fill',
+//     'stroke'
+//   ],
+//   fonts: ['fontFamily'],
+//   fontSizes: ['fontSize'],
+//   fontWeights: ['fontWeight'],
+//   letterSpacings: ['letterSpacing'],
+//   lineHeights: ['lineHeight'],
+//   opacities: ['opacity'],
+//   radii: [
+//     'borderRadius',
+//     'borderTopRightRadius',
+//     'borderTopLeftRadius',
+//     'borderBottomRightRadius',
+//     'borderBottomLeftRadius',
+//     'borderEndEndRadius',
+//     'borderEndStartRadius',
+//     'borderStartEndRadius',
+//     'borderStartStartRadius'
+//   ],
+//   shadows: ['boxShadow', 'textShadow'],
+//   sizes: [
+//     // width
+//     'width',
+//     'minWidth',
+//     'maxWidth',
+//     // height
+//     'height',
+//     'minHeight',
+//     'maxHeight',
+//     // flex-basis
+//     'flexBasis',
+//     // size
+//     'size',
+//     'blockSize',
+//     'inlineSize',
+//     'maxBlockSize',
+//     'maxInlineSize',
+//     'minBlockSize',
+//     'minInlineSize'
+//   ],
+//   space: [
+//     // margin
+//     'margin',
+//     'marginTop',
+//     'marginRight',
+//     'marginBottom',
+//     'marginLeft',
+//     'marginX',
+//     'marginY',
+//     'marginBlock',
+//     'marginBlockEnd',
+//     'marginBlockStart',
+//     'marginInline',
+//     'marginInlineEnd',
+//     'marginInlineStart',
+//     // padding
+//     'padding',
+//     'paddingTop',
+//     'paddingRight',
+//     'paddingBottom',
+//     'paddingLeft',
+//     'paddingX',
+//     'paddingY',
+//     'paddingBlock',
+//     'paddingBlockEnd',
+//     'paddingBlockStart',
+//     'paddingInline',
+//     'paddingInlineEnd',
+//     'paddingInlineStart',
+//     // inset
+//     'inset',
+//     'insetBlock',
+//     'insetBlockEnd',
+//     'insetBlockStart',
+//     'insetInline',
+//     'insetInlineEnd',
+//     'insetInlineStart',
+//     // position
+//     'top',
+//     'right',
+//     'bottom',
+//     'left',
+//     // gap
+//     'gridGap',
+//     'gridColumnGap',
+//     'gridRowGap',
+//     'gap',
+//     'columnGap',
+//     'rowGap'
+//   ],
+//   zIndices: ['zIndex']
+// }
+
 const themeMap = {
   color: 'colors',
   backgroundColor: 'colors',
